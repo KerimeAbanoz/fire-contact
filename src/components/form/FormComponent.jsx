@@ -14,16 +14,15 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({ info, setInfo , handleSubmit}) => {
-  const handleChange = (e) => {
+const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
+  const handleChange=(e)=>{
     e.preventDefault();
-    // const name = e.target.name;
-    // const value = e.target.value;
-    const { name, value } = e.target;
-    setInfo({ ...info, [name]: value });
-    console.log(info);
-  };
-
+    // const name=e.target.name;
+    // const value=e.target.value; 
+    const {name,value}=e.target;
+   setInfo({...info,[name]:value})
+   console.log(info)
+  }
   return (
     <Grid
       textAlign="center"
@@ -92,7 +91,7 @@ const FormComponent = ({ info, setInfo , handleSubmit}) => {
               </Select>
             </FormControl>
             <Button variant="contained" type="submit" value="Submit">
-              ADD
+            {isAdd}
             </Button>
           </Stack>
         </form>
