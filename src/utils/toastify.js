@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Toastify = (msg) => {
+const toastify = (msg) => {
   toast.success(msg, {
     position: "top-right",
     autoClose: 5000,
@@ -14,4 +14,4 @@ const Toastify = (msg) => {
   });
 };
 
-export default Toastify;
+export default toastify;
